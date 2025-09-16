@@ -16,17 +16,26 @@ function App() {
       nama
     )}`;
 
-    const teksUndangan = `Assalamualaikum Warahmatullahi Wabarakatuh
+    const teksUndangan = `Bissmillahirrahmanirrahim
+Assalamualaikum Warahmatullahi Wabarakatuh
+Kepada Yth:
+${nama}
 
-Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i ${nama} untuk menghadiri acara kami.
+Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i - ${nama} - untuk menghadiri acara kami. 
 
-Berikut link undangan kami, untuk info lengkap dari acara bisa kunjungi :
+Ika Dyah Ayu Fitria S. Psi
+dengan
+A. Dandi Firmansyah S. Psi
 
+Untuk Info Detail Acara, Lokasi, dan Waktu Lebih Lengkap bisa akses link undangan online berikut :
 ${linkUndangan}
 
-Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.
+Merupakan Suatu Kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Rekan-rekan berkenan hadir dan memberikan doa restu di acara pernikahan kami.
 
-Terima kasih banyak atas perhatiannya.
+Karena keterbatasan jarak dan waktu tidak dapat mengirimkan undangan ini secara langsung, maka melalui e-invitation ini dapat menjadi pengganti undangan resmi sehingga tujuan kami tersampaikan.
+
+Hormat Kami yang berbahagia
+Ayu dan Dandi
 
 Wassalamualaikum Warahmatullahi Wabarakatuh`;
 
