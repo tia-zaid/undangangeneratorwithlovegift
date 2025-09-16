@@ -32,7 +32,7 @@ Pastikan Anda sudah menginstall:
 1. Clone repository ini:
 
 ```bash
-git clone https://github.com/username/tebar-undangan-generator.git
+git clone https://github.com/rifkidocs/tebar-undangan-generator.git
 cd tebar-undangan-generator
 ```
 
@@ -321,8 +321,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Jika Anda memiliki pertanyaan atau saran, silakan hubungi:
 
-- Email: your-email@example.com
-- GitHub: [@yourusername](https://github.com/yourusername)
+- Email: rifkiars@gmail.com
+- GitHub: [@rifkidocs](https://github.com/rifkidocs)
 
 ## 🙏 Acknowledgments
 
