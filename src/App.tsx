@@ -19,7 +19,7 @@ function App() {
     const teksUndangan = `Bissmillahirrahmanirrahim
 Assalamualaikum Warahmatullahi Wabarakatuh
 Kepada Yth:
-${nama}
+*${nama}*
 
 Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i - ${nama} - untuk menghadiri acara kami. 
 
@@ -41,6 +41,14 @@ Wassalamualaikum Warahmatullahi Wabarakatuh`;
 
     setHasilUndangan(teksUndangan);
     setShowResult(true);
+
+    // Scroll to result section after generating
+    setTimeout(() => {
+      const resultSection = document.querySelector(".result-section");
+      if (resultSection) {
+        resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
   };
 
   const copyToClipboard = async () => {
@@ -57,6 +65,10 @@ Wassalamualaikum Warahmatullahi Wabarakatuh`;
     setNama("");
     setHasilUndangan("");
     setShowResult(false);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -98,9 +110,14 @@ Wassalamualaikum Warahmatullahi Wabarakatuh`;
             <div className="result-box">
               <pre>{hasilUndangan}</pre>
             </div>
-            <button onClick={copyToClipboard} className="btn-copy">
-              📋 Salin Teks Undangan
-            </button>
+            <div className="result-buttons">
+              <button onClick={copyToClipboard} className="btn-copy">
+                📋 Salin Teks Undangan
+              </button>
+              <button onClick={scrollToTop} className="btn-scroll-top">
+                ⬆️ Kembali ke Atas
+              </button>
+            </div>
           </div>
         )}
 

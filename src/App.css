@@ -5,12 +5,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -19,8 +23,9 @@ body {
   min-height: 100vh;
   color: #333;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding: 20px 0;
 }
 
 .app {
@@ -151,15 +156,41 @@ header p {
   transform: translateY(-2px);
 }
 
-.btn-copy {
-  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
-  color: white;
+.result-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
-.btn-copy:hover {
+.btn-copy,
+.btn-scroll-top {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-scroll-top {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.btn-copy:hover,
+.btn-scroll-top:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(72, 187, 120, 0.3);
+}
+
+.btn-scroll-top:hover {
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
 }
 
 /* Result Section */
@@ -232,15 +263,18 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 10px 0;
+    align-items: flex-start;
   }
 
   .app {
     padding: 10px;
+    min-height: auto;
   }
 
   .container {
     padding: 30px 20px;
+    margin: 10px 0;
   }
 
   header h1 {
@@ -254,31 +288,45 @@ footer p {
 
   .btn-generate,
   .btn-reset,
-  .btn-copy {
+  .btn-copy,
+  .btn-scroll-top {
     width: 100%;
     max-width: 300px;
   }
 
+  .result-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .result-box {
     padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
   }
 
   .result-box pre {
     font-size: 0.9rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    padding: 5px;
+    padding: 5px 0;
+    align-items: flex-start;
   }
 
   .app {
     padding: 5px;
+    min-height: auto;
   }
 
   .container {
     padding: 20px 15px;
+    margin: 5px 0;
   }
 
   header h1 {
@@ -293,9 +341,19 @@ footer p {
 
   .btn-generate,
   .btn-reset,
-  .btn-copy {
+  .btn-copy,
+  .btn-scroll-top {
     padding: 12px 20px;
     font-size: 0.9rem;
+  }
+
+  .result-box {
+    max-height: 50vh;
+    padding: 15px;
+  }
+
+  .result-box pre {
+    font-size: 0.85rem;
   }
 }
 
