@@ -23,9 +23,9 @@ Kepada Yth:
 
 Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i - ${nama} - untuk menghadiri acara kami. 
 
-Ika Dyah Ayu Fitria S. Psi
+*Ika Dyah Ayu Fitria S. Psi*
 dengan
-A. Dandi Firmansyah S. Psi
+*Achmad Dandi Firmansyah S. Psi*
 
 Untuk Info Detail Acara, Lokasi, dan Waktu Lebih Lengkap bisa akses link undangan online berikut :
 ${linkUndangan}
